@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import axios from "axios";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -9,6 +10,11 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    loader: () => {
+      axios
+        .get("https://raw.githubusercontent.com/jujuck/api/main/movies.json")
+        .then((res) => res.data);
+    },
   },
 ]);
 
