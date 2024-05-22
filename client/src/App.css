@@ -1,14 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
-  justify-content: center;
-  div {
-    border: 1px solid black;
-  }
+  --title: "Libre Baskerville", serif;
+  --paragraph: "Open Sans", sans-serif;
+  --button-color: #f2c743;
+  --background-gradient-color: linear-gradient(
+    0deg,
+    rgba(7, 12, 22, 1) 0%,
+    rgba(6, 12, 24, 1) 100%
+  );
+  --background-card-color: #d9d9d9;
 }

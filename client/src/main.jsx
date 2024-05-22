@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import axios from "axios";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -10,8 +9,18 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    loader: () =>
-      axios.get("http://localhost:3310/api/movies").then((res) => res.data),
+  },
+  {
+    path: "/movie",
+    element: <App />,
+  },
+  {
+    path: "/favorite",
+    element: <App />,
+  },
+  {
+    path: "/contactform",
+    element: <App />,
   },
 ]);
 
