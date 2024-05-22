@@ -10,11 +10,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    loader: () => {
+    loader: () =>
       axios
         .get("https://raw.githubusercontent.com/jujuck/api/main/movies.json")
-        .then((res) => res.data);
-    },
+        .then((res) => res.data),
   },
 ]);
 
