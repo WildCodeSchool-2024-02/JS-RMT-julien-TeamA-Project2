@@ -1,4 +1,5 @@
 const express = require("express");
+const movies = require("../database/data");
 
 const router = express.Router();
 
@@ -11,6 +12,11 @@ const router = express.Router();
 // Route to get a list of items
 router.get("/movies", (req, res) => {
   res.send("Hello");
+});
+
+router.get("/movies/:id", (req, res) => {
+  const movie = movies.find((film) => film.id === +req.params.id);
+  res.status(200).json(movie);
 });
 
 // Route to get a specific item by ID
