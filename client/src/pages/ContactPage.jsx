@@ -1,3 +1,8 @@
-const contactform = () => <h2>is it working ? </h2>
+import ContactForm from '../components/ContactForm'
 
-export default contactform;
+function ContactPage() {
+  return  <ContactForm />
+}
+
+
+export default ContactPage;
