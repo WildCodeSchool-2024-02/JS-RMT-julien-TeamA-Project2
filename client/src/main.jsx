@@ -4,7 +4,9 @@ import axios from "axios";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import axios from "axios";
 import App from "./App";
+import FavoritesPage from "./pages/FavoritesPage";
 
 const router = createBrowserRouter([
   {
@@ -18,8 +20,14 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/favorite",
-    element: <App />,
+    path: "/favorites",
+    element: <FavoritesPage/>,
+    loader : async () => {
+      const res = await axios.get(
+      `http://localhost:3310/api/movies`
+      );
+      return res.data.slice(0, 3)
+    }
   },
   {
     path: "/contactform",
