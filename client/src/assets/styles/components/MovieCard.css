@@ -4,3 +4,12 @@
     width: 8vw;
   }
 }
+
+/* Partie responsive */
+@media screen and (max-width: 768px) {
+  .movie-card {
+    img {
+      width: 28vw;
+    }
+  }
+}

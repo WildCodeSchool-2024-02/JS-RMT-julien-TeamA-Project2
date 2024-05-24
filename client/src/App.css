@@ -16,9 +16,17 @@
   --background-card-color: #d9d9d9;
 }
 
-.movie-container {
+.app-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1vw;
   margin: 0 24vw;
+}
+
+/* Partie responsive */
+@media screen and (max-width: 768px) {
+  .app-container {
+    margin: 21vw;
+    gap: 2vw;
+  }
 }
