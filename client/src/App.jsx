@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <h1>WildersMoviesClub</h1>
-      <section>
+      <section className="movie-container">
         {movies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
         ))}

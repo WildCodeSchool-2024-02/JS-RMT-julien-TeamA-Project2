@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 
+import "../assets/styles/components/MovieCard.css";
+
 function MovieCard({ movie }) {
   return (
     <div className="movie-card">
