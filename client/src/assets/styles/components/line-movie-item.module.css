@@ -1,0 +1,44 @@
+.lineMovieItem {
+  background-color: var(--background-card-color);
+  border-radius: 20px;
+  display: flex;
+  margin: 1rem;
+}
+
+.lineMovieItemLeft {
+  width: 120px;
+  margin: 0;
+  padding: 0;
+}
+
+.lineMoviePoster {
+  width: 100%;
+  margin: 1rem;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.lineMovieItemRight {
+  width: 100%;
+  padding: 0.5rem 2rem;
+  margin: 1rem;
+}
+
+.lineMovieItemRight h2 {
+  font-family: var(--title);
+}
+
+.lineMovieItemInfo {
+  display: flex;
+}
+
+.lineMovieItemInfo div {
+  width: 50%;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.lineMovieItemInfo span {
+  font-size: 22px;
+  font-family: var(--paragraph);
+}

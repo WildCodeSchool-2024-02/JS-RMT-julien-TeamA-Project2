@@ -1,0 +1,10 @@
+.myFavoritesTitle {
+  font-family: var(--title);
+  color: #d5d5d5;
+  text-align: center;
+}
+
+.lineMovieList {
+  margin-top: 2rem;
+  padding: 2rem 8rem;
+}
