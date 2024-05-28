@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import { FavProvider } from "./contexts/FavContext";
 import App from "./App";
 
 const router = createBrowserRouter([
@@ -28,6 +29,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <FavProvider>
+      <RouterProvider router={router} />
+    </FavProvider>
   </React.StrictMode>
 );
