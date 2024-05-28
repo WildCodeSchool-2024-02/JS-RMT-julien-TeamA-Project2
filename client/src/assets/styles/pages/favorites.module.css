@@ -1,3 +1,7 @@
+body {
+  background: var(--background-gradient-color);
+}
+
 .myFavoritesTitle {
   font-family: var(--title);
   color: #d5d5d5;
