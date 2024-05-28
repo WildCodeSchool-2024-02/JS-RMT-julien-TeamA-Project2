@@ -1,0 +1,41 @@
+.ContactContainer {
+  font-family: var(--paragraph);
+  background-color: var(--background-card-color);
+  width: 50vw;
+  margin: 50px auto 0 auto;
+  padding: 3% 5%;
+  border-radius: 15px;
+  form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .formEntry {
+    border: none;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  textarea {
+    height: 200px;
+    resize: none;
+  }
+  select {
+    appearance: none;
+    border: 0;
+    padding: 0 1em;
+    color: black;
+    background-color: white;
+    text-align: center;
+  }
+  .formEntry:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+  }
+  button {
+    align-self: end;
+  }
+}

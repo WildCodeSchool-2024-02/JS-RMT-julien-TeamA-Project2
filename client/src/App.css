@@ -22,7 +22,6 @@ body {
 
 button {
   margin-top: 10px;
-  align-self: end;
   text-align: center;
   cursor: pointer;
   width: 150px;
