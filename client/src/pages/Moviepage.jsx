@@ -8,8 +8,8 @@ function Moviepage() {
   return (
     <div>
       <h1>movie-page</h1>
-      <MovieDescription key={movie.id} movie={movie} />
       <MoviePoster key={movie.id} poster={movie} />
+      <MovieDescription key={movie.id} movie={movie} />
     </div>
   );
 }
