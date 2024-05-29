@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "./MoviePoster.css";
 
 function MoviePoster({ poster }) {
   return (

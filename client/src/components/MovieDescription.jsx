@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "./MovieDescription.css";
 
 function MovieDescription({ movie }) {
   return (

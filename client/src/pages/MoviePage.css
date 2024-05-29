@@ -1,0 +1,43 @@
+.moviepage-container {
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-color: blue;
+}
+
+.info {
+  margin-left: 22.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: white;
+  display: flex;
+}
+.bandeau {
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.308);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .genre {
+    margin-left: 27rem;
+  }
+  p {
+    margin-right: 25rem;
+  }
+  .tiny-votecount {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .moviepage-container {
+    margin: 0;
+  }
+  .bandeau {
+  }
+}
