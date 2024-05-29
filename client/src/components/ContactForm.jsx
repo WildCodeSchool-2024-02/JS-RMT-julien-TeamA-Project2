@@ -1,14 +1,21 @@
-import { useState } from "react";
-import "../assets/styles/ContactForm.css"
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import "../assets/styles/ContactForm.css";
 
 function ContactForm() {
   const [category, setCategory] = useState("")
   const [page, setPage] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
-
+  const contactForm = useRef();
+  
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    emailjs
+      .sendForm('service_it7e70d', 'template_k6t4o8x', contactForm.current, {
+        publicKey: 'HL6pDegxlrhASDrSs'
+      })
   }
   const handleCategory = (event) => {
     setCategory (event.target.value);
@@ -27,7 +34,7 @@ function ContactForm() {
     <div className="ContactContainer">
       <h2>Contact Us</h2>
       <p>We're sorry you encounter a problem. Please as detail as possible, we'll correct it as soon as possible</p>
-      <form action={handleSubmit}>
+      <form ref={contactForm} action={handleSubmit}>
         <label htmlFor="category"> Select a reason </label>
         <select className="formEntry" name="category" id="category" onChange={handleCategory}>
           <option value={category}>-- Please choose an option --</option>
