@@ -19,9 +19,6 @@ function LineMovieItem({ title, posterPath, voteAverage, voteCount }) {
           </div>
         </div>
       </div>
-      <div className="styles.lineMovieItemRight">
-        <button type="button">❤️</button>
-      </div>
     </div>
   );
 }
