@@ -48,6 +48,7 @@ function ContactForm() {
       <h2>Contact Us</h2>
       <p>We're sorry you encounter a problem. Please as detail as possible, we'll correct it as soon as possible</p>
       <form ref={contactForm} action={handleSubmit}>
+
         <label htmlFor="category"> Select a reason </label>
         <select className="formEntry" name="category" id="category" onChange={handleCategory}>
           <option value={category}>-- Please choose an option --</option>
@@ -55,8 +56,11 @@ function ContactForm() {
           <option value="mistakeMovie"> I found a mistake about one movie</option>
           <option value="other"> I encounter another problem</option>
         </select>
-        <label htmlFor="page">Concerned page</label>
-        <input className="formEntry" type="text" name="page" id="page" value={page} onChange={handlePage}/>
+        {category === "mistakeMovie" && <>
+          <label htmlFor="page">Concerned page</label>
+          <input className="formEntry" type="text" name="page" id="page" value={page} onChange={handlePage}/>
+
+        </>}
         <label htmlFor="email">Email</label>
         <input className="formEntry" required type="email" name="email" id="email" value={email} onChange={handleEmail}/>
         <label htmlFor="message">Message</label>
