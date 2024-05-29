@@ -1,25 +1,25 @@
 import * as PropTypes from "prop-types";
-import styles from "../assets/styles/components/line-movie-item.module.css";
+import "../assets/styles/components/line-movie-item.css";
 
 function LineMovieItem({ title, posterPath, voteAverage, voteCount }) {
   return (
-    <div className={styles.lineMovieItem}>
-      <div className={styles.lineMovieItemLeft}>
-        <img src={posterPath} alt={title} className={styles.lineMoviePoster} />
+    <div className="lineMovieItem">
+      <div className="lineMovieItemLeft">
+        <img src={posterPath} alt={title} className="lineMoviePoster" />
       </div>
-      <div className={styles.lineMovieItemCenter}>
+      <div className="lineMovieItemCenter">
         <h2>{title}</h2>
-        <div className={styles.lineMovieItemInfo}>
+        <div className="lineMovieItemInfo">
           <div>
             <span>{voteAverage}/10</span>
           </div>
-          <div className={styles.voteCount}>
+          <div className="voteCount">
             <span>{voteCount}</span>
             <p>Votes</p>
           </div>
         </div>
       </div>
-      <div className={styles.lineMovieItemRight}>
+      <div className="styles.lineMovieItemRight">
         <button type="button">❤️</button>
       </div>
     </div>

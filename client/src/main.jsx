@@ -22,7 +22,7 @@ const router = createBrowserRouter([
     path: "/favorites",
     element: <FavoritesPage />,
     loader: async () => {
-      const res = await axios.get(`http://localhost:3310/api/movies`);
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/movies`);
       return res.data.slice(0, 3);
     },
   },
