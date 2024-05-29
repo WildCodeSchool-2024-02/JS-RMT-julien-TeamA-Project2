@@ -1,0 +1,74 @@
+.lineMovieItem {
+  background-color: var(--background-card-color);
+  border-radius: 20px;
+  display: flex;
+  margin: 1rem;
+}
+
+.lineMovieItemLeft {
+  width: 120px;
+}
+
+.lineMoviePoster {
+  width: 100%;
+  margin: 1rem;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.lineMovieItemCenter {
+  width: 100%;
+  padding: 0.5rem 2rem;
+  margin: 1rem;
+}
+
+.lineMovieItemCenter h2 {
+  font-family: var(--title), serif;
+}
+
+.lineMovieItemInfo {
+  display: flex;
+}
+
+.lineMovieItemInfo div {
+  width: 50%;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.lineMovieItemInfo span {
+  font-size: 22px;
+  font-family: var(--paragraph), serif;
+}
+
+@media screen and (max-width: 768px) {
+  .lineMovieItem {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .lineMovieItemLeft {
+    text-align: center;
+    width: 100%;
+  }
+
+  .lineMoviePoster {
+    width: 30%;
+  }
+
+  .lineMovieItemCenter {
+    margin: 0;
+  }
+
+  .lineMovieItemCenter span {
+    font-size: 18px;
+  }
+
+  .lineMovieItemInfo div {
+    width: 100%;
+  }
+
+  .voteCount {
+    display: none;
+  }
+}
