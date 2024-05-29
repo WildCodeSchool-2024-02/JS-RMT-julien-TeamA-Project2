@@ -6,6 +6,7 @@ function ContactForm() {
   const [category, setCategory] = useState("")
   const [page, setPage] = useState("")
   const [email, setEmail] = useState("")
+  const [name, setName] = useState("")
   const [message, setMessage] = useState("")
   const [status, setStatus] = useState("")
   const contactForm = useRef();
@@ -39,6 +40,9 @@ function ContactForm() {
   const handleEmail = (event) => {
     setEmail (event.target.value);
   }
+  const handleName = (event) => {
+    setName (event.target.value);
+  }
   const handleMessage = (event) => {
     setMessage (event.target.value);
   }
@@ -48,7 +52,10 @@ function ContactForm() {
       <h2>Contact Us</h2>
       <p>We're sorry you encounter a problem. Please as detail as possible, we'll correct it as soon as possible</p>
       <form ref={contactForm} action={handleSubmit}>
-
+        <label htmlFor="email">Name</label>
+        <input className="formEntry" required type="text" name="name" id="name" value={name} onChange={handleName}/>
+        <label htmlFor="email">Email</label>
+        <input className="formEntry" required type="email" name="email" id="email" value={email} onChange={handleEmail}/>
         <label htmlFor="category"> Select a reason </label>
         <select className="formEntry" name="category" id="category" onChange={handleCategory}>
           <option value={category}>-- Please choose an option --</option>
@@ -59,10 +66,7 @@ function ContactForm() {
         {category === "mistakeMovie" && <>
           <label htmlFor="page">Concerned page</label>
           <input className="formEntry" type="text" name="page" id="page" value={page} onChange={handlePage}/>
-
         </>}
-        <label htmlFor="email">Email</label>
-        <input className="formEntry" required type="email" name="email" id="email" value={email} onChange={handleEmail}/>
         <label htmlFor="message">Message</label>
         <textarea className="formEntry" required name="message" id="message" value={message} onChange={handleMessage}/>
         <button type="submit" onClick={handleSubmit}>Send</button>
