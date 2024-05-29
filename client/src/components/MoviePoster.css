@@ -1,9 +1,15 @@
-.movieposter {
-}
-
 .movieposter img {
   border: 1px solid black;
   border-radius: 30px;
   width: 15%;
   transform: translateY(140px); /* Ajustez la valeur selon vos besoins */
+}
+
+@media screen and (max-width: 768px) {
+  .movieposter {
+    text-align: center;
+    img {
+      width: 21%;
+    }
+  }
 }

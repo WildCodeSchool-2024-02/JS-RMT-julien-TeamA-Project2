@@ -12,18 +12,30 @@ function Moviepage() {
         className="moviepage-container"
         style={{ backgroundImage: `url(${movie.backdrop_path})` }}
       >
-        <MoviePoster key={movie.id} poster={movie} />
-        <div className="info">
-          <p>{movie.title}</p>
-          {movie.release_date}
+        <div className="bandeau-container">
+          <MoviePoster key={movie.id} poster={movie} />
+          <section className="bandeau">
+            <div className="bandeau-noinfo" />
+            <div className="bandeau-info">
+              <div>
+                <p>
+                  {movie.title} - {movie.release_date}
+                </p>
+              </div>
+              <div className="bandeau-bg">
+                <p>{movie.genre_ids}</p>
+              </div>
+            </div>
+
+            <div className="bandeau-info">
+              <div />
+              <div className="bandeau-bg bandeau-note">
+                <p>{movie.vote_average}/10</p>
+                <p className="tiny-votecount">{movie.vote_count} votes</p>
+              </div>
+            </div>
+          </section>
         </div>
-        <section className="bandeau">
-          <p className="genre">{movie.genre_ids}</p>
-          <div>
-            <p>{movie.vote_average}/10</p>
-            <p className="tiny-votecount">{movie.vote_count} votes</p>
-          </div>
-        </section>
       </section>
       <MovieDescription key={movie.id} movie={movie} />
     </>

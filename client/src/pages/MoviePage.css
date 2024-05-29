@@ -9,26 +9,49 @@
   background-color: blue;
 }
 
-.info {
-  margin-left: 22.5rem;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: white;
-  display: flex;
+.bandeau-container {
+  padding-left: 5rem;
 }
+
 .bandeau {
   font-size: 1.5rem;
   color: white;
-  background-color: rgba(0, 0, 0, 0.308);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  .genre {
-    margin-left: 27rem;
+  height: 6rem;
+
+  .bandeau-noinfo {
+    width: 10vw;
   }
-  p {
-    margin-right: 25rem;
+
+  .bandeau-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 40vw;
+
+    div {
+      height: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.bandeau-note {
+        flex-direction: column;
+      }
+    }
   }
+
+  .bandeau-bg {
+    background-color: rgba(0, 0, 0, 0.308);
+    width: 100%;
+
+    p {
+      display: block;
+    }
+  }
+
   .tiny-votecount {
     font-size: 1rem;
   }
@@ -38,6 +61,22 @@
   .moviepage-container {
     margin: 0;
   }
+
+  .bandeau-container {
+    padding: 0;
+    font-size: 0.8rem;
+  }
+
   .bandeau {
+    .bandeau-noinfo {
+      order: 1;
+      width: 0;
+    }
+    .bandeau-info {
+      width: 50vw;
+    }
+    p {
+      font-size: 1rem;
+    }
   }
 }
