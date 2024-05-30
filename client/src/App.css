@@ -19,7 +19,7 @@
 body {
   background: var(--background-gradient-color);
 }
-  /*Bouton*/
+  
 button {
   margin-top: 10px;
   text-align: center;
@@ -49,7 +49,6 @@ button:active {
   box-shadow: rgba(240, 226, 185, 0.502) 0 3px 7px inset;
   transform: translateY(2px);
 }
-    /* Mise en forme Acceuil */  
   
 .app-container {
   display: flex;
