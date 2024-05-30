@@ -21,3 +21,18 @@ h1,
 h2 {
   font-family: var(--title);
 }
+
+.app-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vw;
+  margin: 0 24vw;
+}
+
+/* Partie responsive */
+@media screen and (max-width: 768px) {
+  .app-container {
+    margin: 21vw;
+    gap: 2vw;
+  }
+}
