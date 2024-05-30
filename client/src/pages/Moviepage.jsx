@@ -18,7 +18,7 @@ function Moviepage() {
             <div className="bandeau-noinfo" />
             <div className="bandeau-info">
               <div>
-                <p>
+                <p className="bandeau-title">
                   {movie.title} - {movie.release_date}
                 </p>
               </div>
