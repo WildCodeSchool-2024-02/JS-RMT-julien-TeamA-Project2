@@ -19,7 +19,7 @@
 body {
   background: var(--background-gradient-color);
 }
-
+  /*Bouton*/
 button {
   margin-top: 10px;
   text-align: center;
@@ -48,4 +48,20 @@ button:focus {
 button:active {
   box-shadow: rgba(240, 226, 185, 0.502) 0 3px 7px inset;
   transform: translateY(2px);
+
+    /* Mise en forme Acceuil */  
+  
+.app-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vw;
+  margin: 0 24vw;
+}
+
+/* Partie responsive */
+@media screen and (max-width: 768px) {
+  .app-container {
+    margin: 21vw;
+    gap: 2vw;
+  }
 }
