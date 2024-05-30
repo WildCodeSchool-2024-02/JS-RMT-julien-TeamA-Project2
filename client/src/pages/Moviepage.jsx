@@ -18,9 +18,8 @@ function Moviepage() {
             <div className="bandeau-noinfo" />
             <div className="bandeau-info">
               <div>
-                <p className="bandeau-title">
-                  {movie.title} - {movie.release_date}
-                </p>
+                <h1 className="bandeau-title">{movie.title}</h1>
+                <p>{movie.release_date.slice(0, 4)}</p>
               </div>
               <div className="bandeau-bg">
                 <p>{movie.genre_ids}</p>
