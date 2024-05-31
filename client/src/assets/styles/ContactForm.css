@@ -41,7 +41,7 @@
 }
 
 @media (width < 768px) {
-  .ContactContainer {
+  .contactContainer {
     width: 80%;
   }
 }
