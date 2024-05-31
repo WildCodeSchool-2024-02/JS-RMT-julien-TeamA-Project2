@@ -12,6 +12,8 @@ create table movies (
   vote_count int not null
 );
 
+
+
 INSERT INTO
     movies (backdrop_path,genre_ids,id,original_language,overview,poster_path,release_date,title,vote_average,vote_count)
 VALUES
