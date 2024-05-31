@@ -9,6 +9,7 @@ import App from "./App";
 import Moviepage from "./pages/Moviepage";
 import ContactPage from "./pages/ContactPage"
 import FavoritesPage from "./pages/FavoritesPage";
+import ErrorPage from "./pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -22,10 +23,14 @@ const router = createBrowserRouter([
   {
     path: "/movies/:id",
     element: <Moviepage />,
+    errorElement : <ErrorPage />,
     loader: async ({ params }) => {
       const res = await axios.get(
-        `http://localhost:3310/api/movies/${params.id}`
+        `${import.meta.env.VITE_API_URL}/api/movies/${params.id}`
       );
+      if (res.status === 404) {
+        throw new Response("Not Found", { status: 404 });
+      }
       return res.data;
     },
   },
@@ -38,7 +43,7 @@ const router = createBrowserRouter([
     },
   },
   {
-    path: "/contactform",
+    path: "/contact",
     element: <ContactPage />,
   },
 ]);
