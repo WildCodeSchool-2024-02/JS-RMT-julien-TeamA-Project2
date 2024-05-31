@@ -1,5 +1,5 @@
 function ErrorPage() {
-  return  <h1> Prout </h1>
+  return  <h1 style={{color : "white"}}> We can't find that movie </h1>
 }
 
 
