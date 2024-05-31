@@ -8,7 +8,7 @@ const movies = [
     original_language: "en",
     original_title: "Hocus Pocus 2",
     overview:
-      "It’s been 29 years since someone lit the Black Flame Candle and resurrected the 17th-century sisters, and they are looking for revenge. Now it is up to three high-school students to stop the ravenous witches from wreaking a new kind of havoc on Salem before dawn on All Hallow’s Eve.",
+      "It's been 29 years since someone lit the Black Flame Candle and resurrected the 17th-century sisters, and they are looking for revenge. Now it is up to three high-school students to stop the ravenous witches from wreaking a new kind of havoc on Salem before dawn on All Hallow's Eve.",
     popularity: 6354.721,
     poster_path:
       "https://image.tmdb.org/t/p/w500/7ze7YNmUaX81ufctGqt0AgHxRtL.jpg",
@@ -659,7 +659,7 @@ const movies = [
     original_language: "fr",
     original_title: "Inexorable",
     overview:
-      'Desperately seeking inspiration for the follow-up novel to his bestseller "Inexorable", Marcel Bellmer moves in his wife\'s old family mansion with his family.',
+      "Desperately seeking inspiration for the follow-up novel to his bestseller Inexorable, Marcel Bellmer moves in his wife's old family mansion with his family.",
     popularity: 1357.668,
     poster_path:
       "https://image.tmdb.org/t/p/w500/iiclsw6zgRJz5D5Cc6sn4Cs9GQo.jpg",
@@ -1563,7 +1563,7 @@ const movies = [
     original_language: "es",
     original_title: "La Princesa",
     overview:
-      'Refusing to marry a drug lord, Grecia is determined to pay her father\'s debt herself. To earn the money, she decides to\nbet in the Sinaloa palenques, where she meets Armando. He is immediately captivated by her beauty and fearless attitude. But, little does he know that falling for her will be his most dangerous endeavor. Based on the famous corrido hit "La Princesa", by Alfredo Ríos "El Komander".',
+      "Refusing to marry a drug lord, Grecia is determined to pay her father's debt herself. To earn the money, she decides to\nbet in the Sinaloa palenques, where she meets Armando. He is immediately captivated by her beauty and fearless attitude. But, little does he know that falling for her will be his most dangerous endeavor. Based on the famous corrido hit La Princesa, by Alfredo Ríos El Komander.",
     popularity: 661.958,
     poster_path:
       "https://image.tmdb.org/t/p/w500/ksxiXqwPuEjh3gct1zUpyzNoQFt.jpg",
@@ -1584,7 +1584,7 @@ const movies = [
     original_language: "en",
     original_title: "Hotel Transylvania: Transformania",
     overview:
-      "When Van Helsing's mysterious invention, the \"Monsterfication Ray,\" goes haywire, Drac and his monster pals are all transformed into humans, and Johnny becomes a monster. In their new mismatched bodies, Drac and Johnny must team up and race across the globe to find a cure before it's too late, and before they drive each other crazy.",
+      "When Van Helsing's mysterious invention, the Monsterfication Ray, goes haywire, Drac and his monster pals are all transformed into humans, and Johnny becomes a monster. In their new mismatched bodies, Drac and Johnny must team up and race across the globe to find a cure before it's too late, and before they drive each other crazy.",
     popularity: 597.326,
     poster_path:
       "https://image.tmdb.org/t/p/w500/teCy1egGQa0y8ULJvlrDHQKnxBL.jpg",

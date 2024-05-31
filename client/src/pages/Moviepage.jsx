@@ -1,8 +1,9 @@
 import { useLoaderData } from "react-router-dom";
 import MovieDescription from "../components/MovieDescription";
 import MoviePoster from "../components/MoviePoster";
-import "./MoviePage.css";
 import Footer from "../components/Footer";
+import "../assets/styles/pages/MoviePage.css";
+
 
 function Moviepage() {
   const movie = useLoaderData();
