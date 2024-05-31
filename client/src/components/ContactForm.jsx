@@ -74,11 +74,7 @@ function ContactForm() {
   return (
     <div className="contactContainer">
       <h2>Contact Us</h2>
-      <p>
-        {" "}
-        We're sorry you encounter a problem. Please as detail as possible, we'll
-        correct it as soon as possible{" "}
-      </p>
+      <p>We're sorry you encounter a problem. Please as detail as possible, we'll correct it as soon as possible</p>
       <form ref={contactForm} action={handleSubmit}>
         <label htmlFor="email">Name</label>
         <input
