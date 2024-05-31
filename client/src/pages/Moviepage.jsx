@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import MovieDescription from "../components/MovieDescription";
 import MoviePoster from "../components/MoviePoster";
 import "./MoviePage.css";
+import Footer from "../components/Footer";
 
 function Moviepage() {
   const movie = useLoaderData();
@@ -37,6 +38,7 @@ function Moviepage() {
         </div>
       </section>
       <MovieDescription key={movie.id} movie={movie} />
+      <Footer />
     </>
   );
 }

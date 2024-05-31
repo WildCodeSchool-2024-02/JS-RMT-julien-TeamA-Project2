@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 
 import MovieCard from "./components/MovieCard";
+import Footer from "./components/Footer";
 
 import "./App.css";
 
@@ -14,6 +15,7 @@ function App() {
           <MovieCard key={movie.id} movie={movie} />
         ))}
       </section>
+      <Footer />
     </>
   );
 }
