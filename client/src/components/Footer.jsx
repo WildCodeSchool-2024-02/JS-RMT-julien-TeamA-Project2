@@ -3,10 +3,10 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <div className="footer">
-      Missing a movie? Find a mistake?{" "}
+    <footer>
+      Missing a movie? Find a mistake?
       <Link to="/contact">contact us here</Link>
-    </div>
+    </footer>
   );
 }
 export default Footer;
