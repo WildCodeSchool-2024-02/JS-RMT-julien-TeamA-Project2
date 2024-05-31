@@ -4,7 +4,9 @@ import logo from "../assets/images/logo.png";
 function Navigation() {
   return (
     <nav>
-      <img src={logo} alt="Logo website" />
+      <Link to="/">
+        <img src={logo} alt="Logo website" />
+      </Link>
       <Link to="/favorites">
         <button type="button">Access favorites</button>
       </Link>
