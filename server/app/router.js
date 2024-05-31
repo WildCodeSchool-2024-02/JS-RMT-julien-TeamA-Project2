@@ -14,6 +14,11 @@ router.get("/movies", (req, res) => {
   res.status(200).json(movies);
 });
 
+router.get("/movies/:id", (req, res) => {
+  const movie = movies.find((film) => film.id === +req.params.id);
+  res.status(200).json(movie);
+});
+
 // Route to get a specific item by ID
 
 // Route to add a new item
