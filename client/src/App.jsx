@@ -9,6 +9,15 @@ import "./App.css";
 function App() {
   const movies = useLoaderData();
   const [search, setSearch] = useState("");
+
+  const filteredMovies = movies.filter(
+    (movie) =>
+      search === "" ||
+      movie.title.toLowerCase().indexOf(search.toLowerCase()) !== -1
+  );
+
+  const hasMovies = filteredMovies.length > 0;
+
   return (
     <>
       <h1>WildersMoviesClub</h1>
@@ -17,15 +26,14 @@ function App() {
         randomId={movies[Math.floor(Math.random() * movies.length)].id}
       />
       <section className="app-container">
-        {movies
-          .filter(
-            (movie) =>
-              search === "" ||
-              movie.title.toLowerCase().indexOf(search.toLowerCase()) !== -1
-          )
-          .map((movie) => (
-            <MovieCard key={movie.id} movie={movie} />
-          ))}
+        {filteredMovies.map((movie) => (
+          <MovieCard key={movie.id} movie={movie} />
+        ))}
+        <p className="noMovieMessage">
+          {hasMovies
+            ? ""
+            : "There is no movie matching your search, please try again."}
+        </p>
       </section>
       <Footer />
     </>
