@@ -6,7 +6,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { FavProvider } from "./contexts/FavContext";
 import App from "./App";
+
+import ContactPage from "./pages/ContactPage"
 import FavoritesPage from "./pages/FavoritesPage";
+
 
 const router = createBrowserRouter([
   {
@@ -29,7 +32,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/contactform",
-    element: <App />,
+    element: <ContactPage />,
   },
 ]);
 
