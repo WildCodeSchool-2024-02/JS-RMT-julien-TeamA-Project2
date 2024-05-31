@@ -15,14 +15,14 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     loader: () =>
-      axios.get("http://localhost:3310/api/movies").then((res) => res.data),
+      axios.get(`${import.meta.env.VITE_API_URL}/api/movies`).then((res) => res.data),
   },
   {
     path: "/movies/:id",
     element: <Moviepage />,
     loader: async ({ params }) => {
       const res = await axios.get(
-        `http://localhost:3310/api/movies/${params.id}`
+        `${import.meta.env.VITE_API_URL}/api/movies/${params.id}`
       );
       return res.data;
     },
