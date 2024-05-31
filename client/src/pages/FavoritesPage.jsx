@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import LineMovieList from "../components/LineMovieList";
 import "../assets/styles/pages/favorites.css";
+import Footer from "../components/Footer";
 
 function FavoritesPage() {
   const favoriteMovies = useLoaderData();
@@ -11,6 +12,7 @@ function FavoritesPage() {
       <div className="lineMovieList">
         <LineMovieList movies={favoriteMovies} />
       </div>
+      <Footer />
     </>
   );
 }
