@@ -9,3 +9,11 @@
     font-size: 2rem;
   }
 }
+
+@media (width > 768px) {
+  .bandeau-title {
+    justify-content: center;
+    margin-right: 25%;
+    margin-top: 1.5%;
+  }
+}

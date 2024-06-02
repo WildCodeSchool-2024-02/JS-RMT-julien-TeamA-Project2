@@ -36,3 +36,11 @@
   transform: translateY(-7px);
   font-size: 0.8rem;
 }
+
+@media (width > 768px) {
+  .movieposter {
+    order: -1;
+    margin-left: 5%;
+    width: 35%;
+  }
+}
