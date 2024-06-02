@@ -3,30 +3,20 @@ import "../assets/styles/components/MoviePoster.css";
 
 function MoviePoster({ poster }) {
   return (
-    <section className="moviepage-container" style={{ backgroundImage: `url(${poster.backdrop_path})` }}>
-      <div className="bandeau-container">
+    <section className="moviepage-container" style={{ backgroundImage: `url(${poster.backdrop_path})` }}>      
+      <section className="bandeau">
+        <div className="bandeau-bg">
+            <p>{poster.genre_ids}</p>
+        </div>
         <div className="movieposter">
           <img src={poster.poster_path} alt="Orphan: First Kill" />
         </div>
-        <section className="bandeau">
-          <div className="bandeau-noinfo" />
-          <div className="bandeau-info">
-            <div className="bandeau-bg">
-              <p>{poster.genre_ids}</p>
-            </div>
-          </div>
-          <div className="bandeau-info">
-            <div />
-            <div className="bandeau-bg bandeau-note">
-              <p>{poster.vote_average}/10</p>
-              <p className="tiny-votecount">{poster.vote_count} votes</p>
-            </div>
-          </div>
-        </section>
-      </div>
+        <div className="bandeau-bg bandeau-note">
+            <p>{poster.vote_average}/10</p>
+            <p className="tiny-votecount">{poster.vote_count} votes</p>
+        </div>
+      </section>
     </section>
-    
-    
   );
 }
 
