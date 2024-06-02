@@ -1,19 +1,13 @@
 .bandeau-title {
-  display: flex;
-  align-items: end;
   gap: 1rem;
   margin: 3rem 0 0 1rem;
   font-size: 2rem;
   color: white;
-  p {
-    font-size: 2rem;
-  }
 }
 
 @media (width > 768px) {
   .bandeau-title {
-    justify-content: center;
-    margin-right: 25%;
-    margin-top: 1.5%;
+    margin-left: 10%;
+    margin-top: 3%;
   }
 }
