@@ -4,7 +4,6 @@ import axios from "axios";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { FavProvider } from "./contexts/FavContext";
 import App from "./App";
 import Moviepage from "./pages/Moviepage";
 import ContactPage from "./pages/ContactPage";
@@ -52,8 +51,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <FavProvider>
-      <RouterProvider router={router} />
-    </FavProvider>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );

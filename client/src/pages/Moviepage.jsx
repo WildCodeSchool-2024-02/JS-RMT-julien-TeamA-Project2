@@ -16,6 +16,7 @@ function Moviepage() {
         <h1>{movie.title}</h1>
         <p>{movie.release_date.slice(0, 4)}</p>
       </div>
+
       <MovieDescription key={movie.id} movie={movie} />
       <Footer />
     </>
