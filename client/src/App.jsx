@@ -16,8 +16,6 @@ function App() {
       movie.title.toLowerCase().indexOf(search.toLowerCase()) !== -1
   );
 
-  const hasMovies = filteredMovies.length > 0;
-
   return (
     <>
       <h1>WildersMoviesClub</h1>
@@ -29,11 +27,11 @@ function App() {
         {filteredMovies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
         ))}
-        <p className="noMovieMessage">
-          {hasMovies
-            ? ""
-            : "There is no movie matching your search, please try again."}
-        </p>
+        {filteredMovies.length === 0 && (
+          <p className="noMovieMessage">
+            There is no movie matching your search, please try again.
+          </p>
+        )}
       </section>
       <Footer />
     </>
