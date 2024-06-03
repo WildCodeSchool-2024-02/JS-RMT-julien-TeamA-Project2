@@ -1,0 +1,41 @@
+.searchBar {
+  text-align: center;
+  padding: 1em;
+}
+
+.searchBar input {
+  border-radius: 4px;
+  border: 2px solid #d9d9d9;
+  line-height: 1rem;
+  padding: 0.5rem;
+  width: 40%;
+}
+
+.random-button {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  margin-left: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  background-color: var(--button-color);
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0 2px 4px,
+    rgba(0, 0, 0, 0.3) 0 7px 13px -3px,
+    rgba(240, 226, 185, 0.502) 0 -3px 0 inset;
+}
+
+.random-button:hover,
+.random-button:focus {
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0 4px 8px,
+    rgba(0, 0, 0, 0.3) 0 7px 13px -3px,
+    rgba(240, 226, 185, 0.502) 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.random-button:active {
+  box-shadow: rgba(240, 226, 185, 0.502) 0 3px 7px inset;
+  transform: translateY(2px);
+}
