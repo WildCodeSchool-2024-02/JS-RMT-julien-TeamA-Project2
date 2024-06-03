@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import Navigation from "../components/Navigation";
 import MovieDescription from "../components/MovieDescription";
 import MoviePoster from "../components/MoviePoster";
 import "./MoviePage.css";
@@ -8,6 +9,7 @@ function Moviepage() {
 
   return (
     <>
+      <Navigation />
       <section
         className="moviepage-container"
         style={{ backgroundImage: `url(${movie.backdrop_path})` }}
