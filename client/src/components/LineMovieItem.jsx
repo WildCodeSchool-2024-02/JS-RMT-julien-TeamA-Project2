@@ -1,5 +1,5 @@
 import * as PropTypes from "prop-types";
-import "../assets/styles/components/line-movie-item.css";
+import "../assets/styles/components/LineMovieItem.css";
 
 function LineMovieItem({ title, posterPath, voteAverage, voteCount }) {
   return (

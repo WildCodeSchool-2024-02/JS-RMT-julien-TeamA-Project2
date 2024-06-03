@@ -1,4 +1,4 @@
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
 import * as PropTypes from "prop-types";
 
 const FavoritesContext = createContext({
@@ -9,11 +9,17 @@ export function FavoritesProvider({ children }) {
   const [favoriteIds, setFavoriteIds] = useState([]);
 
   const addToFavorites = (id) => {
-    setFavoriteIds([...favoriteIds, id]);
+    const newFavoriteIds = [...favoriteIds, id];
+    localStorage.setItem("favoriteIds", JSON.stringify(newFavoriteIds));
+    setFavoriteIds(newFavoriteIds);
   };
 
   const removeFromFavorites = (id) => {
-    setFavoriteIds(favoriteIds.filter((favoriteId) => favoriteId !== id));
+    const newFavoriteIds = favoriteIds.filter(
+      (favoriteId) => favoriteId !== id
+    );
+    localStorage.setItem("favoriteIds", JSON.stringify(newFavoriteIds));
+    setFavoriteIds(newFavoriteIds);
   };
 
   const handleToggleFavorite = (movieId) => {
@@ -23,6 +29,13 @@ export function FavoritesProvider({ children }) {
       addToFavorites(movieId);
     }
   };
+
+  useEffect(() => {
+    const favorites = localStorage.getItem("favoriteIds");
+    if (favorites) {
+      setFavoriteIds(JSON.parse(favorites));
+    }
+  }, []);
 
   return (
     <FavoritesContext.Provider value={{ favoriteIds, handleToggleFavorite }}>
