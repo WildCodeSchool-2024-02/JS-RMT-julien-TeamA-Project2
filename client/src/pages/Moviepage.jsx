@@ -2,12 +2,12 @@ import { useLoaderData } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import MovieDescription from "../components/MovieDescription";
 import MoviePoster from "../components/MoviePoster";
+import GenderCarousel from "../components/GenderCarousel";
 import Footer from "../components/Footer";
 import "../assets/styles/pages/MoviePage.css";
 
 function Moviepage() {
-  const movie = useLoaderData();
-
+  const { movie, similarMovies } = useLoaderData();
   return (
     <>
       <Navigation styleClass="moviepage" />
@@ -18,6 +18,7 @@ function Moviepage() {
       </div>
 
       <MovieDescription key={movie.id} movie={movie} />
+      <GenderCarousel similarMovies={similarMovies}/>
       <Footer />
     </>
   );
