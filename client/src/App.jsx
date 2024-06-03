@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { useState } from "react";
 
 import MovieCard from "./components/MovieCard";
 import FilterBar from "./components/FilterBar";
