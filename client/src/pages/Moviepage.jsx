@@ -2,43 +2,28 @@ import { useLoaderData } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import MovieDescription from "../components/MovieDescription";
 import MoviePoster from "../components/MoviePoster";
-import "./MoviePage.css";
+import Footer from "../components/Footer";
+import "../assets/styles/pages/MoviePage.css";
+
 
 function Moviepage() {
   const movie = useLoaderData();
 
   return (
+
     <>
       <Navigation styleClass="movipage" />
       <section
         className="moviepage-container"
-        style={{ backgroundImage: `url(${movie.backdrop_path})` }}
-      >
-        <div className="bandeau-container">
-          <MoviePoster key={movie.id} poster={movie} />
-          <section className="bandeau">
-            <div className="bandeau-noinfo" />
-            <div className="bandeau-info">
-              <div>
-                <h1 className="bandeau-title">{movie.title}</h1>
-                <p>{movie.release_date.slice(0, 4)}</p>
-              </div>
-              <div className="bandeau-bg">
-                <p>{movie.genre_ids}</p>
-              </div>
-            </div>
+        style={{ backgroundImage: `url(${movie.backdrop_path})` }}      
+      <MoviePoster key={movie.id} poster={movie} /> 
+      <div className="bandeau-title">
+        <h1>{movie.title}</h1>
+        <p>{movie.release_date.slice(0, 4)}</p>
+      </div>
 
-            <div className="bandeau-info">
-              <div />
-              <div className="bandeau-bg bandeau-note">
-                <p>{movie.vote_average}/10</p>
-                <p className="tiny-votecount">{movie.vote_count} votes</p>
-              </div>
-            </div>
-          </section>
-        </div>
-      </section>
       <MovieDescription key={movie.id} movie={movie} />
+      <Footer />
     </>
   );
 }
