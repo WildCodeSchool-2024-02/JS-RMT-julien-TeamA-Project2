@@ -8,7 +8,7 @@ function FavoritesPage() {
 
   return (
     <>
-      <Navigation styleClass="favorites-nav" />
+      <Navigation styleClass="favorites" />
       <h1 className="myFavoritesTitle">My favorites</h1>
       <div className="lineMovieList">
         <LineMovieList movies={favoriteMovies} />

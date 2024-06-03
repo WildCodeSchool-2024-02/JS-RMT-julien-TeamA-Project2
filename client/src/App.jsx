@@ -9,17 +9,11 @@ function App() {
   const movies = useLoaderData();
   const location = useLocation();
 
-  const getNavStyle = (pathname) => {
-    switch (pathname) {
-      case "/":
-        return "home-nav";
-      default:
-        return "default-nav";
-    }
-  };
+  const styleClass = location.pathname === "/" ? "home" : "";
+
   return (
     <>
-      <Navigation styleClass={getNavStyle(location.pathname)} />
+      <Navigation styleClass={styleClass} />
       <h1>WildersMoviesClub</h1>
       <section className="app-container">
         {movies.map((movie) => (

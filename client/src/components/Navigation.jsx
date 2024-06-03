@@ -5,7 +5,7 @@ import "../assets/styles/components/Navigation.css";
 
 function Navigation({ styleClass }) {
   return (
-    <nav className={styleClass}>
+    <nav className={`nav ${styleClass}`}>
       <div className="logo-container">
         <Link to="/" className="logo">
           <img src={logo} alt="Logo website" />

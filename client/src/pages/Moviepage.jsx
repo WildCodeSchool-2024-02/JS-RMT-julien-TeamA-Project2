@@ -9,7 +9,7 @@ function Moviepage() {
 
   return (
     <>
-      <Navigation />
+      <Navigation styleClass="movipage" />
       <section
         className="moviepage-container"
         style={{ backgroundImage: `url(${movie.backdrop_path})` }}

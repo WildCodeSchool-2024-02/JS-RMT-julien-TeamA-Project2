@@ -4,7 +4,7 @@ import Navigation from "../components/Navigation";
 function ContactPage() {
   return (
     <>
-      <Navigation />
+      <Navigation styleClass="contact" />
       <ContactForm />
     </>
   );
