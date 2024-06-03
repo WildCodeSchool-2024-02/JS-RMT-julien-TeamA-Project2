@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import axios from "axios";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { FavoritesProvider } from "./contexts/FavoritesContext";
 
 import App from "./App";
 import Moviepage from "./pages/Moviepage";
@@ -51,6 +52,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <FavoritesProvider>
+      <RouterProvider router={router} />
+    </FavoritesProvider>
   </React.StrictMode>
 );

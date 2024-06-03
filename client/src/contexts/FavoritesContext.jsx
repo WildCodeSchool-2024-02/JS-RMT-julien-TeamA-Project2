@@ -3,8 +3,6 @@ import * as PropTypes from "prop-types";
 
 const FavoritesContext = createContext({
   favoriteIds: [],
-  addToFavorites: () => {},
-  removeFromFavorites: () => {},
 });
 
 export function FavoritesProvider({ children }) {
@@ -18,14 +16,21 @@ export function FavoritesProvider({ children }) {
     setFavoriteIds(favoriteIds.filter((favoriteId) => favoriteId !== id));
   };
 
+  const handleToggleFavorite = (movieId) => {
+    if (favoriteIds.includes(movieId)) {
+      removeFromFavorites(movieId);
+    } else {
+      addToFavorites(movieId);
+    }
+  };
+
   return (
-    <FavoritesContext.Provider
-      value={{ favoriteIds, addToFavorites, removeFromFavorites }}
-    >
+    <FavoritesContext.Provider value={{ favoriteIds, handleToggleFavorite }}>
       {children}
     </FavoritesContext.Provider>
   );
 }
+
 FavoritesProvider.propTypes = {
   children: PropTypes.string.isRequired,
 };
