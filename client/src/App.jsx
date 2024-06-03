@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 
 import MovieCard from "./components/MovieCard";
+import FilterBar from "./components/FilterBar";
 
 import "./App.css";
 
@@ -9,6 +10,7 @@ function App() {
   return (
     <>
       <h1>WildersMoviesClub</h1>
+      <FilterBar />
       <section className="app-container">
         {movies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
