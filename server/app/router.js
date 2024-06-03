@@ -28,7 +28,12 @@ router.get("/movies/:id", (req, res) => {
         res.sendStatus(404);
       }
 
-      res.status(200).json(movie);
+      const genre = movie.genre_ids;
+
+      client.query("SELECT * FROM movies WHERE genre_ids IN (?) AND id != ?", [genre, movieId])
+        .then(([similarMovies]) => {
+          res.status(200).json({ movie, similarMovies });
+        })
     });
 });
 
