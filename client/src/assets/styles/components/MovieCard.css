@@ -1,15 +1,41 @@
 .movie-card {
-  width: auto;
-  img {
-    width: 8vw;
+  background-size: cover;
+  width: 8vw;
+  height: 12vw;
+  display: flex;
+  align-items: flex-end;
+}
+
+.shadow-wrapper {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.movie-card:hover {
+  .shadow-wrapper {
+    display: flex;
   }
 }
 
-/* Partie responsive */
+.heart-button {
+  width: 50%;
+  padding-top: 0.2rem;
+}
+
+.vote-info {
+  width: 50%;
+  color: white;
+  padding: 0.2rem;
+}
+
 @media screen and (max-width: 768px) {
   .movie-card {
-    img {
-      width: 28vw;
-    }
+    width: 28vw;
+    height: 42vw;
+  }
+
+  .shadow-wrapper {
+    display: none;
   }
 }

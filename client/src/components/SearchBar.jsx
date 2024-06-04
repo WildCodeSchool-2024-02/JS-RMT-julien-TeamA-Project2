@@ -10,7 +10,7 @@ function SearchBar({ setSearch, randomId }) {
   return (
     <form className="searchBar" onSubmit={(event) => event.preventDefault()}>
       <input type="text" name="search" onChange={handleSearchChange} />
-      <Link className="random-button" to={`/movies/${randomId}`}>
+      <Link className="random-button yellow-button" to={`/movies/${randomId}`}>
         I'm feeling lucky
       </Link>
     </form>
