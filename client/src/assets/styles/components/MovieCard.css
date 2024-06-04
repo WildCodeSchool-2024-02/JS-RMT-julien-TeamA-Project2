@@ -2,20 +2,25 @@
   background-size: cover;
   width: 8vw;
   height: 12vw;
+  display: flex;
+  align-items: flex-end;
 }
 
 .shadow-wrapper {
-  display: flex;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 0.2rem;
+  display: flex;
 }
 
 .heart-button {
   width: 50%;
+  padding-top: 0.2rem;
 }
 
 .vote-info {
+  width: 50%;
   color: white;
+  padding: 0.2rem;
 }
 
 @media screen and (max-width: 768px) {
