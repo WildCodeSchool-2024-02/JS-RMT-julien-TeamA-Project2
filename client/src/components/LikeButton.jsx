@@ -2,14 +2,15 @@ import * as PropTypes from "prop-types";
 import { useFavoritesContext } from "../contexts/FavoritesContext";
 import heartLogo from "../assets/images/empty-heart.svg";
 import heartIcon from "../assets/images/red-heart.svg";
+import "../assets/styles/components/LikeButton.css";
 
 function LikeButton({ movieId }) {
   const { favoriteIds, handleToggleFavorite } = useFavoritesContext();
 
   return (
     <button
-      className="like-button"
       type="button"
+      className="like-button"
       onClick={() => handleToggleFavorite(movieId)}
     >
       {favoriteIds.includes(movieId) ? (

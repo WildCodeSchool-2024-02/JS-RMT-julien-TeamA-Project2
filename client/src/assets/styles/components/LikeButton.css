@@ -1,9 +1,8 @@
 .like-button {
-  background-color: mediumpurple;
 }
 .empty-heart {
-  width: 50%;
+  width: 2rem;
 }
-.read-heart {
-  width: 20%;
+.red-heart {
+  width: 2rem;
 }
