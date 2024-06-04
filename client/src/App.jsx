@@ -14,13 +14,19 @@ function App() {
     <>
       <h1>WildersMoviesClub</h1>
       <FilterBar
-        selectedGenre={selectedGenre}
-        setSelectedGenre={setSelectedGenre}
+        type="genres"
+        title="Genres"
+        selectedFilter={selectedGenre}
+        setSelectedFilter={setSelectedGenre}
       />
       <section className="app-container">
-        {movies.map((movie) => (
-          <MovieCard key={movie.id} movie={movie} />
-        ))}
+        {movies
+          .filter(
+            (movie) => movie.genre_ids === selectedGenre || selectedGenre === ""
+          )
+          .map((movie) => (
+            <MovieCard key={movie.id} movie={movie} />
+          ))}
       </section>
     </>
   );

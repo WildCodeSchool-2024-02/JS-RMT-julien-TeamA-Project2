@@ -3,43 +3,45 @@ import "./FilterBar.css";
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 
-function FilterBar({ selectedGenre, setSelectedGenre }) {
-  const [filter, setFilter] = useState([]);
-  const handleGenreChange = (event) => {
-    setSelectedGenre(event.target.value);
+function FilterBar({ selectedFilter, setSelectedFilter, title, type }) {
+  const [filters, setFilters] = useState([]);
+  const handleFilterChange = (event) => {
+    setSelectedFilter(event.target.value);
   };
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_API_URL}/api/genres`)
-      .then((res) => setFilter(res.data));
+      .get(`${import.meta.env.VITE_API_URL}/api/${type}`)
+      .then((res) => setFilters(res.data));
+    // eslint-disable-next-line
   }, []);
 
   return (
     <div className="filter-bar-container">
-      <label className="filter-bar-label" htmlFor="genre-select">
-        Filter by Genre:
+      <label className="filter-bar-label">
+        Filter by {title}:
+        <select
+          className="filter-bar-select"
+          value={selectedFilter}
+          onChange={handleFilterChange}
+        >
+          <option value="">All {title}</option>
+          {filters.map((filter) => (
+            <option key={filter} value={filter}>
+              {filter}
+            </option>
+          ))}
+        </select>
       </label>
-      <select
-        className="filter-bar-select"
-        id="genre-select"
-        value={selectedGenre}
-        onChange={handleGenreChange}
-      >
-        <option value="">Genres</option>
-        {filter.map((genre) => (
-          <option key={genre} value={genre}>
-            {genre}
-          </option>
-        ))}
-      </select>
     </div>
   );
 }
 
 FilterBar.propTypes = {
-  selectedGenre: PropTypes.string.isRequired,
-  setSelectedGenre: PropTypes.func.isRequired,
+  selectedFilter: PropTypes.string.isRequired,
+  setSelectedFilter: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
 };
 
 export default FilterBar;
