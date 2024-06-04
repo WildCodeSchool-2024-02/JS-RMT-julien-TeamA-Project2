@@ -12,9 +12,14 @@ const router = express.Router();
 // Route to get a list of items
 router.get("/movies", (req, res) => {
   if (req.query.genre) {
-    client.query("SELECT * FROM movies WHERE genre_ids = ? AND id != ?", [req.query.genre, req.query.id]).then(([movies]) => {
-      res.status(200).json(movies);
-    });
+    client
+      .query("SELECT * FROM movies WHERE genre_ids = ? AND id != ?", [
+        req.query.genre,
+        req.query.id,
+      ])
+      .then(([movies]) => {
+        res.status(200).json(movies);
+      });
   } else {
     client.query("SELECT * FROM movies").then(([movies]) => {
       res.status(200).json(movies);
@@ -33,7 +38,7 @@ router.get("/movies/:id", (req, res) => {
       if (!movie) {
         res.sendStatus(404);
       } else {
-        res.status(200).json(movie)
+        res.status(200).json(movie);
       }
     });
 });
