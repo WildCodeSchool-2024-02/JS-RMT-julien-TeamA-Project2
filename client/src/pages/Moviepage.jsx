@@ -7,18 +7,19 @@ import Footer from "../components/Footer";
 import "../assets/styles/pages/MoviePage.css";
 
 function Moviepage() {
-  const { movie, similarMovies } = useLoaderData();
+  const movie = useLoaderData();
+
   return (
     <>
       <Navigation styleClass="moviepage" />
-      <MoviePoster key={movie.id} poster={movie} />
+      <MoviePoster poster={movie} />
       <div className="bandeau-title">
         <h1>{movie.title}</h1>
         <p>{movie.release_date.slice(0, 4)}</p>
       </div>
+      <MovieDescription movie={movie} />
+      <GenderCarousel genre={movie.genre_ids} movieId={movie.id} />
 
-      <MovieDescription key={movie.id} movie={movie} />
-      <GenderCarousel similarMovies={similarMovies}/>
       <Footer />
     </>
   );
