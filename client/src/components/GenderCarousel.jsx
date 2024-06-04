@@ -1,10 +1,15 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import '../assets/styles/components/GenderCarousel.css'
 
 function GenderCarousel({similarMovies}) {
-  const items = similarMovies.map((movie) => ( <img className='carousel-img' src={movie.poster_path} alt={movie.title} key={movie.poster_path}/> ));
+  const items = similarMovies.map((movie) => (
+    <Link to={`/movies/${movie.id}`} key={movie.id}>
+      <img className='carousel-img' src={movie.poster_path} alt={movie.title}/> 
+    </Link>
+  ));
   const responsive = {
     0: { items: 2 },
     700: { items: 3 },
