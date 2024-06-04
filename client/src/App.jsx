@@ -2,12 +2,13 @@ import { useLoaderData } from "react-router-dom";
 import { useState } from "react";
 import MovieCard from "./components/MovieCard";
 import SearchBar from "./components/SearchBar";
+import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
-
 import "./App.css";
 
 function App() {
   const movies = useLoaderData();
+
   const [search, setSearch] = useState("");
 
   const filteredMovies = movies.filter(
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <>
+      <Navigation styleClass="home" />
       <h1>WildersMoviesClub</h1>
       <SearchBar
         setSearch={setSearch}
