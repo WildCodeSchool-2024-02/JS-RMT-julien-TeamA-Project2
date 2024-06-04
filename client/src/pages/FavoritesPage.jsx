@@ -4,9 +4,13 @@ import "../assets/styles/pages/favorites.css";
 
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import { useFavoritesContext } from "../contexts/FavoritesContext";
 
 function FavoritesPage() {
-  const favoriteMovies = useLoaderData();
+  const { favoriteIds } = useFavoritesContext();
+  const favoriteMovies = useLoaderData().filter((movie) =>
+    favoriteIds.includes(movie.id)
+  );
 
   return (
     <>
