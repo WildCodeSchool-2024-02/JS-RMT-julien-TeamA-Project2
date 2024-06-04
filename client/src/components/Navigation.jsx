@@ -12,8 +12,8 @@ function Navigation({ styleClass }) {
         </Link>
       </div>
       <div className="fav-container">
-        <Link to="/favorites" className="fav">
-          <button type="button">Access favorites</button>
+        <Link to="/favorites" className="fav-button">
+          Access favorites
         </Link>
       </div>
     </nav>

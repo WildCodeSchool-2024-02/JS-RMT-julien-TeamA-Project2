@@ -10,7 +10,7 @@ function Moviepage() {
 
   return (
     <>
-      <Navigation styleClass="movipage" />
+      <Navigation styleClass="moviepage" />
       <MoviePoster key={movie.id} poster={movie} />
       <div className="bandeau-title">
         <h1>{movie.title}</h1>
