@@ -6,9 +6,9 @@ import '../assets/styles/components/GenderCarousel.css'
 function GenderCarousel({similarMovies}) {
   const items = similarMovies.map((movie) => ( <img className='carousel-img' src={movie.poster_path} alt={movie.title} key={movie.poster_path}/> ));
   const responsive = {
-    0: { items: 1 },
-    568: { items: 3 },
-    1024: { items: 7 },
+    0: { items: 2 },
+    700: { items: 3 },
+    1024: { items: 6 },
 };
   return(
     <div className="carousel-container">
