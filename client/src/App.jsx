@@ -11,6 +11,7 @@ import "./App.css";
 function App() {
   const movies = useLoaderData();
   const [selectedGenre, setSelectedGenre] = useState("");
+  const [selectedLanguage, setSelectedLanguage] = useState("");
   const [search, setSearch] = useState("");
 
   const filteredMovies = movies.filter(
@@ -28,6 +29,10 @@ function App() {
         title="Genres"
         selectedFilter={selectedGenre}
         setSelectedFilter={setSelectedGenre}
+        type2="languages"
+        title2="Languages"
+        selectedFilterlanguage={selectedLanguage}
+        setSelectedFilterLanguage={setSelectedLanguage}
       />
       <SearchBar
         setSearch={setSearch}
@@ -37,6 +42,11 @@ function App() {
         {filteredMovies
           .filter(
             (movie) => movie.genre_ids === selectedGenre || selectedGenre === ""
+          )
+          .filter(
+            (movie) =>
+              movie.original_language === selectedLanguage ||
+              selectedLanguage === ""
           )
           .map((movie) => (
             <MovieCard key={movie.id} movie={movie} />
