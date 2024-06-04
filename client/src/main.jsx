@@ -7,7 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { FavProvider } from "./contexts/FavContext";
 import App from "./App";
 import Moviepage from "./pages/Moviepage";
-import ContactPage from "./pages/ContactPage"
+import ContactPage from "./pages/ContactPage";
 import FavoritesPage from "./pages/FavoritesPage";
 import ErrorPage from "./pages/ErrorPage";
 
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
   {
     path: "/movies/:id",
     element: <Moviepage />,
-    errorElement : <ErrorPage />,
+    errorElement: <ErrorPage />,
     loader: async ({ params }) => {
       const res = await axios.get(
         `${import.meta.env.VITE_API_URL}/api/movies/${params.id}`

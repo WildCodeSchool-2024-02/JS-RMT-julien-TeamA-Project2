@@ -32,6 +32,16 @@ router.get("/movies/:id", (req, res) => {
     });
 });
 
+router.get("/genres", (req, res) => {
+  client
+    .query("SELECT DISTINCT genre_ids FROM movies")
+    .then((genres) =>
+      res.status(200).json(genres[0].map((movie) => movie.genre_ids))
+    );
+  // via le client ecrire une requete sql qui me retourne la liste des genres uniques
+  // tips: utiliser distinct
+});
+
 // Route to add a new item
 
 /* ************************************************************************* */
