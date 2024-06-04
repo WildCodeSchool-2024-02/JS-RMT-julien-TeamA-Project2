@@ -9,7 +9,13 @@
 .shadow-wrapper {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
+  display: none;
+}
+
+.movie-card:hover {
+  .shadow-wrapper {
+    display: flex;
+  }
 }
 
 .heart-button {
@@ -27,5 +33,9 @@
   .movie-card {
     width: 28vw;
     height: 42vw;
+  }
+
+  .shadow-wrapper {
+    display: none;
   }
 }
