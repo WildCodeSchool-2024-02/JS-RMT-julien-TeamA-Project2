@@ -1,15 +1,26 @@
 .movie-card {
-  width: auto;
-  img {
-    width: 8vw;
-  }
+  background-size: cover;
+  width: 8vw;
+  height: 12vw;
 }
 
-/* Partie responsive */
+.shadow-wrapper {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.2rem;
+}
+
+.heart-button {
+  width: 50%;
+}
+
+.vote-info {
+  color: white;
+}
+
 @media screen and (max-width: 768px) {
   .movie-card {
-    img {
-      width: 28vw;
-    }
+    width: 28vw;
+    height: 42vw;
   }
 }

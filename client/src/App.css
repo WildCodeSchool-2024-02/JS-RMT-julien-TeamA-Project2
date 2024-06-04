@@ -26,7 +26,7 @@ body {
   background: var(--background-gradient-color);
 }
 
-button {
+.yellow-button {
   margin-top: 10px;
   text-align: center;
   cursor: pointer;
@@ -42,8 +42,8 @@ button {
     rgba(240, 226, 185, 0.502) 0 -3px 0 inset;
 }
 
-button:hover,
-button:focus {
+.yellow-button:hover,
+.yellow-button:focus {
   box-shadow:
     rgba(0, 0, 0, 0.4) 0 4px 8px,
     rgba(0, 0, 0, 0.3) 0 7px 13px -3px,
@@ -51,7 +51,7 @@ button:focus {
   transform: translateY(-2px);
 }
 
-button:active {
+.yellow-button:active {
   box-shadow: rgba(240, 226, 185, 0.502) 0 3px 7px inset;
   transform: translateY(2px);
 }

@@ -1,4 +1,5 @@
 .like-button {
+  all: unset;
 }
 .empty-heart {
   width: 2rem;
