@@ -6,18 +6,14 @@ import FilterBar from "./components/FilterBar";
 import SearchBar from "./components/SearchBar";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import Slider from "./components/Slider";
 import "./App.css";
 
 function App() {
   const movies = useLoaderData();
   const [selectedGenre, setSelectedGenre] = useState("");
   const [search, setSearch] = useState("");
-
-  const filteredMovies = movies.filter(
-    (movie) =>
-      search === "" ||
-      movie.title.toLowerCase().indexOf(search.toLowerCase()) !== -1
-  );
+  const [note, setNote] = useState([0, 10]);
 
   return (
     <>
@@ -29,19 +25,25 @@ function App() {
         selectedFilter={selectedGenre}
         setSelectedFilter={setSelectedGenre}
       />
+      <Slider setSlide={setNote} min={0} max={10} />
       <SearchBar
         setSearch={setSearch}
         randomId={movies[Math.floor(Math.random() * movies.length)].id}
       />
       <section className="app-container">
-        {filteredMovies
+        {movies
           .filter(
-            (movie) => movie.genre_ids === selectedGenre || selectedGenre === ""
+            (movie) =>
+              (movie.genre_ids === selectedGenre || selectedGenre === "") &&
+              (search === "" ||
+                movie.title.toLowerCase().includes(search.toLowerCase())) &&
+              movie.vote_average >= note[0] &&
+              movie.vote_average <= note[1]
           )
           .map((movie) => (
             <MovieCard key={movie.id} movie={movie} />
           ))}
-        {filteredMovies.length === 0 && (
+        {movies.length === 0 && (
           <p className="noMovieMessage">
             There is no movie matching your search, please try again.
           </p>
