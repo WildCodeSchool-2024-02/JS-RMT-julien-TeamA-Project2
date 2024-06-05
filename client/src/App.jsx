@@ -15,6 +15,15 @@ function App() {
   const [search, setSearch] = useState("");
   const [note, setNote] = useState([0, 10]);
 
+  const filteredMovies = movies.filter(
+    (movie) =>
+      (movie.genre_ids === selectedGenre || selectedGenre === "") &&
+      (search === "" ||
+        movie.title.toLowerCase().includes(search.toLowerCase())) &&
+      movie.vote_average >= note[0] &&
+      movie.vote_average <= note[1]
+  );
+
   return (
     <>
       <Navigation styleClass="home" />
@@ -31,19 +40,10 @@ function App() {
         randomId={movies[Math.floor(Math.random() * movies.length)].id}
       />
       <section className="app-container">
-        {movies
-          .filter(
-            (movie) =>
-              (movie.genre_ids === selectedGenre || selectedGenre === "") &&
-              (search === "" ||
-                movie.title.toLowerCase().includes(search.toLowerCase())) &&
-              movie.vote_average >= note[0] &&
-              movie.vote_average <= note[1]
-          )
-          .map((movie) => (
-            <MovieCard key={movie.id} movie={movie} />
-          ))}
-        {movies.length === 0 && (
+        {filteredMovies.map((movie) => (
+          <MovieCard key={movie.id} movie={movie} />
+        ))}
+        {filteredMovies.length === 0 && (
           <p className="noMovieMessage">
             There is no movie matching your search, please try again.
           </p>
