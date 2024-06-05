@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client";
 import axios from "axios";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { FavoritesProvider } from "./contexts/FavoritesContext";
 
-import { FavProvider } from "./contexts/FavContext";
 import App from "./App";
 import Moviepage from "./pages/Moviepage";
 import ContactPage from "./pages/ContactPage";
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
     element: <FavoritesPage />,
     loader: async () => {
       const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/movies`);
-      return res.data.slice(0, 3);
+      return res.data;
     },
   },
   {
@@ -52,8 +52,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <FavProvider>
+    <FavoritesProvider>
       <RouterProvider router={router} />
-    </FavProvider>
+    </FavoritesProvider>
   </React.StrictMode>
 );

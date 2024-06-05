@@ -1,7 +1,8 @@
 import * as PropTypes from "prop-types";
-import "../assets/styles/components/line-movie-item.css";
+import "../assets/styles/components/LineMovieItem.css";
+import LikeButton from "./LikeButton";
 
-function LineMovieItem({ title, posterPath, voteAverage, voteCount }) {
+function LineMovieItem({ title, posterPath, voteAverage, voteCount, id }) {
   return (
     <div className="lineMovieItem">
       <div className="lineMovieItemLeft">
@@ -19,6 +20,9 @@ function LineMovieItem({ title, posterPath, voteAverage, voteCount }) {
           </div>
         </div>
       </div>
+      <div className="lineMovieItemRight">
+        <LikeButton movieId={id} />
+      </div>
     </div>
   );
 }
@@ -28,6 +32,7 @@ LineMovieItem.propTypes = {
   posterPath: PropTypes.string.isRequired,
   voteAverage: PropTypes.number.isRequired,
   voteCount: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default LineMovieItem;
