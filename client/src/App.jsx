@@ -29,10 +29,12 @@ function App() {
         title="Genres"
         selectedFilter={selectedGenre}
         setSelectedFilter={setSelectedGenre}
-        type2="languages"
-        title2="Languages"
-        selectedFilterlanguage={selectedLanguage}
-        setSelectedFilterLanguage={setSelectedLanguage}
+      />
+      <FilterBar
+        type="languages"
+        title="Languages"
+        selectedFilter={selectedLanguage}
+        setSelectedFilter={setSelectedLanguage}
       />
       <SearchBar
         setSearch={setSearch}
@@ -41,12 +43,10 @@ function App() {
       <section className="app-container">
         {filteredMovies
           .filter(
-            (movie) => movie.genre_ids === selectedGenre || selectedGenre === ""
-          )
-          .filter(
             (movie) =>
-              movie.original_language === selectedLanguage ||
-              selectedLanguage === ""
+              (movie.genre_ids === selectedGenre || selectedGenre === "") &&
+              (movie.original_language === selectedLanguage ||
+                selectedLanguage === "")
           )
           .map((movie) => (
             <MovieCard key={movie.id} movie={movie} />
