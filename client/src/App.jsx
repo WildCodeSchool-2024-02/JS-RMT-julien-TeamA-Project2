@@ -8,12 +8,14 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import Slider from "./components/Slider";
 import "./App.css";
+import SortMoviesSelect from "./components/SortMoviesSelect";
 
 function App() {
   const movies = useLoaderData();
   const [selectedGenre, setSelectedGenre] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState("");
   const [search, setSearch] = useState("");
+  const [sortBy, setSortBy] = useState("note_desc");
   const [note, setNote] = useState([0, 10]);
 
   // Mise en place d'un filtre Cumulatif
@@ -29,8 +31,20 @@ function App() {
       movie.vote_average <= note[1] &&
       // Filtre sur la langue séléctionné ou garde tous
       (movie.original_language === selectedLanguage || selectedLanguage === "")
-  );
-
+  ).sort((a, b) => {
+    switch (sortBy) {
+      case "note_desc":
+        return b.vote_average - a.vote_average;
+      case "note_asc":
+        return a.vote_average - b.vote_average;
+      case "date_desc":
+        return new Date(b.release_date) - new Date(a.release_date);
+      case "date_asc":
+        return new Date(a.release_date) - new Date(b.release_date);
+      default:
+        return 0;
+    }
+  });
   return (
     <>
       <Navigation styleClass="home" />
@@ -49,6 +63,7 @@ function App() {
           setSelectedFilter={setSelectedLanguage}
         />
         <Slider setSlide={setNote} min={0} max={10} />
+        <SortMoviesSelect setSortBy={setSortBy} />
       </div>
       <SearchBar
         setSearch={setSearch}
