@@ -7,12 +7,13 @@ import "../assets/styles/components/LikeButton.css";
 function LikeButton({ movieId }) {
   const { favoriteIds, handleToggleFavorite } = useFavoritesContext();
 
+  const handleClickFavorite = (event) => {
+    event.preventDefault();
+    handleToggleFavorite(movieId);
+  };
+
   return (
-    <button
-      type="button"
-      className="like-button"
-      onClick={() => handleToggleFavorite(movieId)}
-    >
+    <button type="button" className="like-button" onClick={handleClickFavorite}>
       {favoriteIds.includes(movieId) ? (
         <img className="red-heart" src={heartIcon} alt="Red heart icon" />
       ) : (
