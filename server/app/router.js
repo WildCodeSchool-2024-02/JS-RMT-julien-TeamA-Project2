@@ -52,6 +52,13 @@ router.get("/genres", (req, res) => {
   // via le client ecrire une requete sql qui me retourne la liste des genres uniques
   // tips: utiliser distinct
 });
+router.get("/languages", (req, res) => {
+  client
+    .query("SELECT DISTINCT original_language FROM movies")
+    .then((languages) =>
+      res.status(200).json(languages[0].map((movie) => movie.original_language))
+    );
+});
 
 // Route to add a new item
 

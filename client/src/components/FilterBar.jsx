@@ -5,6 +5,7 @@ import "./FilterBar.css";
 
 function FilterBar({ selectedFilter, setSelectedFilter, title, type }) {
   const [filters, setFilters] = useState([]);
+
   const handleFilterChange = (event) => {
     setSelectedFilter(event.target.value);
   };
