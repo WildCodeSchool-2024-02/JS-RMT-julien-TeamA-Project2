@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "../assets/styles/components/SortMoviesSelect.css";
 
 function SortMoviesSelect({ setSortBy }) {
   const handleSort = (event) => {
