@@ -3,7 +3,7 @@
   display: flex;
 }
 
-p {
+.slider-container p {
   color: white;
   width: 9rem;
   margin-top: 0.3rem;
@@ -36,7 +36,7 @@ p {
     width: 88%;
   }
 
-  p {
+  .slider-container p {
     width: 10rem;
   }
 
