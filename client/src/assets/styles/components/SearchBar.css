@@ -1,6 +1,7 @@
 .searchBar {
   text-align: center;
   padding: 1em;
+  margin-top: 7rem;
 }
 
 .searchBar input {
@@ -38,4 +39,10 @@
 .random-button:active {
   box-shadow: rgba(240, 226, 185, 0.502) 0 3px 7px inset;
   transform: translateY(2px);
+}
+
+@media screen and (max-width: 768px) {
+  .searchBar {
+    margin-top: 2rem;
+  }
 }

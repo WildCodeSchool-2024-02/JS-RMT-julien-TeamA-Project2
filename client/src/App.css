@@ -59,8 +59,8 @@ body {
 .app-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1vw;
-  margin: 0 24vw;
+  gap: 2.7vw;
+  margin: 2rem 24vw;
 }
 
 .no-movie-message {
@@ -70,16 +70,18 @@ body {
 .filter-container {
   display: flex;
   justify-content: center;
+  margin-top: 3.5rem;
 }
 
 /* Partie responsive */
 @media screen and (max-width: 768px) {
   .app-container {
-    margin: 21vw;
+    margin: 3rem 21vw;
     gap: 2vw;
   }
   .filter-container {
     display: block;
-    margin-left: 1rem;
+    margin-left: 4rem;
+    margin-top: 1rem;
   }
 }

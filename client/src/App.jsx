@@ -51,7 +51,10 @@ function App() {
   return (
     <>
       <Navigation styleClass="home" />
-      <h1>WildersMoviesClub</h1>
+      <SearchBar
+        setSearch={setSearch}
+        randomId={movies[Math.floor(Math.random() * movies.length)].id}
+      />
       <div className="filter-container">
         <SortMoviesSelect setSortBy={setSortBy} />
         <FilterBar
@@ -68,10 +71,6 @@ function App() {
         />
         <Slider setSlide={setNote} min={0} max={10} />
       </div>
-      <SearchBar
-        setSearch={setSearch}
-        randomId={movies[Math.floor(Math.random() * movies.length)].id}
-      />
       <section className="app-container">
         {filteredMovies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
