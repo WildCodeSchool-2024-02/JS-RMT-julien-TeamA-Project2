@@ -4,9 +4,11 @@
 
 .filter-bar-label {
   margin-right: 10px;
+  color: white;
 }
 
 .filter-bar-select {
   padding: 5px;
   border-radius: 5px;
+  margin-left: 0.5rem;
 }

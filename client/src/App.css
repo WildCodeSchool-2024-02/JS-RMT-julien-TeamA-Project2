@@ -67,11 +67,19 @@ body {
   font-family: var(--paragraph), serif;
   color: white;
 }
+.filter-container {
+  display: flex;
+  justify-content: center;
+}
 
 /* Partie responsive */
 @media screen and (max-width: 768px) {
   .app-container {
     margin: 21vw;
     gap: 2vw;
+  }
+  .filter-container {
+    display: block;
+    margin-left: 1rem;
   }
 }
