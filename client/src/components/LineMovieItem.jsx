@@ -4,23 +4,23 @@ import LikeButton from "./LikeButton";
 
 function LineMovieItem({ title, posterPath, voteAverage, voteCount, id }) {
   return (
-    <div className="lineMovieItem">
-      <div className="lineMovieItemLeft">
-        <img src={posterPath} alt={title} className="lineMoviePoster" />
+    <div className="line-movie-item">
+      <div className="line-movie-item-left">
+        <img src={posterPath} alt={title} className="lineMovie-poster" />
       </div>
-      <div className="lineMovieItemCenter">
+      <div className="line-movie-item-center">
         <h2>{title}</h2>
-        <div className="lineMovieItemInfo">
+        <div className="line-movie-item-info">
           <div>
             <span>{voteAverage}/10</span>
           </div>
-          <div className="voteCount">
+          <div className="vote-count">
             <span>{voteCount}</span>
             <p>Votes</p>
           </div>
         </div>
       </div>
-      <div className="lineMovieItemRight">
+      <div className="line-movie-item-right">
         <LikeButton movieId={id} />
       </div>
     </div>

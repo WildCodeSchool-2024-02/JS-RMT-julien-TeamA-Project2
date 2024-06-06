@@ -59,7 +59,7 @@ function App() {
           <MovieCard key={movie.id} movie={movie} />
         ))}
         {filteredMovies.length === 0 && (
-          <p className="noMovieMessage">
+          <p className="no-movie-message">
             There is no movie matching your search, please try again.
           </p>
         )}
