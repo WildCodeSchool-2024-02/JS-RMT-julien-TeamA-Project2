@@ -53,6 +53,9 @@ nav {
   .fav-container {
     display: none;
   }
+  .logo-container {
+    padding: 0;
+  }
 }
 
 .nav.contact {

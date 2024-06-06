@@ -21,9 +21,7 @@ function Navigation({ styleClass }) {
 }
 
 Navigation.propTypes = {
-  styleClass: PropTypes.shape({
-    styleClass: PropTypes.string.isRequired,
-  }).isRequired,
+  styleClass: PropTypes.shape({}).isRequired,
 };
 
 export default Navigation;
