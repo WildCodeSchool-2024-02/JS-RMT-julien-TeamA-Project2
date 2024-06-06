@@ -1,78 +1,82 @@
-.lineMovieItem {
+.line-movie-item {
   background-color: var(--background-card-color);
   border-radius: 20px;
   display: flex;
   margin: 1rem;
 }
 
-.lineMovieItemLeft {
+.line-movie-item-left {
   width: 120px;
 }
 
-.lineMoviePoster {
+.lineMovie-poster {
   width: 100%;
   margin: 1rem;
   border: 1px solid black;
   border-radius: 10px;
 }
 
-.lineMovieItemCenter {
+.line-movie-item-center {
   width: 100%;
   padding: 0.5rem 2rem;
   margin: 1rem;
 }
 
-.lineMovieItemCenter h2 {
+.line-movie-item-center h2 {
   font-family: var(--title), serif;
 }
 
-.lineMovieItemInfo {
+.line-movie-item-info {
   display: flex;
 }
 
-.lineMovieItemInfo div {
+.line-movie-item-info div {
   width: 50%;
   margin-top: 2rem;
   text-align: center;
 }
 
-.lineMovieItemInfo span {
+.line-movie-item-info span {
   font-size: 22px;
   font-family: var(--paragraph), serif;
 }
-.lineMovieItemRight {
+.line-movie-item-right {
   display: flex;
   padding: 1rem;
 }
 
 @media screen and (max-width: 768px) {
-  .lineMovieItem {
+  .line-movie-item {
     flex-direction: column;
     text-align: center;
   }
 
-  .lineMovieItemLeft {
+  .line-movie-item-left {
     text-align: center;
     width: 100%;
   }
 
-  .lineMoviePoster {
+  .lineMovie-poster {
     width: 30%;
   }
 
-  .lineMovieItemCenter {
+  .line-movie-item-center {
     margin: 0;
   }
 
-  .lineMovieItemCenter span {
+  .line-movie-item-center span {
     font-size: 18px;
   }
 
-  .lineMovieItemInfo div {
+  .line-movie-item-info div {
     width: 100%;
   }
 
-  .voteCount {
+  .vote-count {
     display: none;
+  }
+
+  .line-movie-item-right {
+    justify-content: center;
   }
 }

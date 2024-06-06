@@ -15,7 +15,7 @@ function LineMovieList({ movies }) {
         />
       ))}
       {movies.length === 0 && (
-        <p className="noMovieMessage">There is no movie in your favorites.</p>
+        <p className="no-movie-message">There is no movie in your favorites.</p>
       )}
     </>
   );

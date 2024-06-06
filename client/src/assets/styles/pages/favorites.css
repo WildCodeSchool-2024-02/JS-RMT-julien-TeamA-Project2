@@ -6,6 +6,7 @@ body {
   font-family: var(--title);
   color: #d5d5d5;
   text-align: center;
+  margin-top: 1rem;
 }
 
 .lineMovieList {

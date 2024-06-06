@@ -63,7 +63,7 @@ body {
   margin: 0 24vw;
 }
 
-.noMovieMessage {
+.no-movie-message {
   font-family: var(--paragraph), serif;
   color: white;
 }

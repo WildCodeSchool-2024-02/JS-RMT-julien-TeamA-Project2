@@ -12,9 +12,9 @@ footer {
 
 footer a {
   color: white;
-  text-decoration: none;
+  margin-left: 4px;
 }
 
 footer a:hover {
-  text-decoration: underline;
+  color: var(--button-color);
 }

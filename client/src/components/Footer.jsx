@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer>
       Missing a movie? Find a mistake?
-      <Link to="/contact">contact us here</Link>
+      <Link to="/contact">Contact us here</Link>
     </footer>
   );
 }
