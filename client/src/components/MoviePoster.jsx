@@ -8,18 +8,18 @@ function MoviePoster({ poster }) {
       className="moviepage-container"
       style={{ backgroundImage: `url(${poster.backdrop_path})` }}
     >
-      <section className="bandeau">
-        <div className="bandeau-bg">
+      <section className="band">
+        <div className="band">
           <p>{poster.genre_ids}</p>
         </div>
         <div className="movieposter">
           <img src={poster.poster_path} alt="Orphan: First Kill" />
         </div>
-        <div className="bandeau-bg bandeau-note">
+        <div className="band-bg band-note">
           <p>{poster.vote_average}/10</p>
           <p className="tiny-votecount">{poster.vote_count} votes</p>
         </div>
-        <div className="bandeau-bg">
+        <div className="band-bg">
           <LikeButton movieId={poster.id} />
         </div>
       </section>
