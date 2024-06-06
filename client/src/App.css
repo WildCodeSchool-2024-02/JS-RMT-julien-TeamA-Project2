@@ -76,11 +76,12 @@ body {
 /* Partie responsive */
 @media screen and (max-width: 768px) {
   .app-container {
-    margin: 21vw;
+    margin: 3rem 21vw;
     gap: 2vw;
   }
   .filter-container {
     display: block;
-    margin-left: 1rem;
+    margin-left: 4rem;
+    margin-top: 1rem;
   }
 }
