@@ -1,0 +1,36 @@
+.carousel-container {
+  margin: 50px;
+  h2 {
+    color: white;
+    margin-bottom: 30px;
+  }
+}
+
+.carousel-img {
+  max-height: 300px;
+}
+
+@media (width < 768px) {
+  .carousel-img {
+    max-height: 250px;
+  }
+}
+
+.next-button,
+.prev-button {
+  width: 50px;
+  position: absolute;
+  top: 35%;
+}
+
+.prev-button {
+  left: -75px;
+}
+
+.next-button {
+  right: -75px;
+}
+
+.alice-carousel {
+  width: 80%;
+}

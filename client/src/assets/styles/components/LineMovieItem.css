@@ -40,6 +40,10 @@
   font-size: 22px;
   font-family: var(--paragraph), serif;
 }
+.lineMovieItemRight {
+  display: flex;
+  padding: 1rem;
+}
 
 @media screen and (max-width: 768px) {
   .lineMovieItem {

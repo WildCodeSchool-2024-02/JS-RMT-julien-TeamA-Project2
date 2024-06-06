@@ -5,6 +5,7 @@ import "../assets/styles/components/Slider.css";
 function Slider({ setSlide, min, max }) {
   return (
     <div className="slider-container">
+      <p>Filter by note:</p>
       <ReactSlider
         className="horizontal-slider"
         thumbClassName="thumb"

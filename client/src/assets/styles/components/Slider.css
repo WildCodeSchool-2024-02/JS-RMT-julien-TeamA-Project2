@@ -1,11 +1,18 @@
 .slider-container {
   width: 28%; /* Ajustez la taille du conteneur selon vos besoins */
-  margin: 0 auto; /* Centre le conteneur */
+  display: flex;
+}
+
+p {
+  color: white;
+  width: 9rem;
+  margin-top: 0.3rem;
 }
 
 .horizontal-slider {
   width: 100%;
   height: 25px;
+  margin-top: 0.25rem;
 }
 
 .thumb {
@@ -26,7 +33,11 @@
 
 @media screen and (max-width: 768px) {
   .slider-container {
-    width: 24%;
+    width: 88%;
+  }
+
+  p {
+    width: 10rem;
   }
 
   .thumb {
