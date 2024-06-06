@@ -35,7 +35,7 @@ function App() {
     <>
       <Navigation styleClass="home" />
       <h1>WildersMoviesClub</h1>
-      <div className="filtre-container">
+      <div className="filter-container">
         <FilterBar
           type="genres"
           title="Genres"

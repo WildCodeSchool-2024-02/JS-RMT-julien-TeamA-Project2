@@ -67,7 +67,7 @@ body {
   font-family: var(--paragraph), serif;
   color: white;
 }
-.filtre-container {
+.filter-container {
   display: flex;
   justify-content: center;
 }
@@ -78,7 +78,7 @@ body {
     margin: 21vw;
     gap: 2vw;
   }
-  .filtre-container {
+  .filter-container {
     display: block;
     margin-left: 1rem;
   }
