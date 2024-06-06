@@ -1,0 +1,14 @@
+.sort-movies-container {
+  margin-bottom: 10px;
+}
+
+.sort-movies-label {
+  margin-right: 10px;
+  color: white;
+}
+
+.sort-movies-select {
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 0.5rem;
+}
