@@ -4,6 +4,7 @@ import "../assets/styles/components/MovieDescription.css";
 function MovieDescription({ movie }) {
   return (
     <div className="moviedescription">
+      <h2>Synopsis</h2>
       <p>{movie.overview}</p>
     </div>
   );

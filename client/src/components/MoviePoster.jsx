@@ -9,11 +9,11 @@ function MoviePoster({ poster }) {
       style={{ backgroundImage: `url(${poster.backdrop_path})` }}
     >
       <section className="band">
-        <div className="band">
+        <div className="band-bg">
           <p>{poster.genre_ids}</p>
         </div>
         <div className="movieposter">
-          <img src={poster.poster_path} alt="Orphan: First Kill" />
+          <img src={poster.poster_path} alt={poster.title} />
         </div>
         <div className="band-bg band-note">
           <p>{poster.vote_average}/10</p>
@@ -33,6 +33,7 @@ MoviePoster.propTypes = {
     poster_path: PropTypes.string.isRequired,
     backdrop_path: PropTypes.string.isRequired,
     genre_ids: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
     vote_average: PropTypes.string.isRequired,
     vote_count: PropTypes.string.isRequired,
   }).isRequired,
