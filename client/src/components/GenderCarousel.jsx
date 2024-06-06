@@ -41,12 +41,12 @@ function GenderCarousel({ genre, movieId }) {
         responsive={responsive}
         controlsStrategy="alternate"
         renderNextButton={() => (
-          <button type="button" className="next-button">
+          <button type="button" className="next-button yellow-button">
             {">"}
           </button>
         )}
         renderPrevButton={() => (
-          <button type="button" className="prev-button">
+          <button type="button" className="prev-button yellow-button">
             {"<"}
           </button>
         )}

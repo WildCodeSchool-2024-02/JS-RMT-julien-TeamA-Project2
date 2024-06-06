@@ -63,6 +63,10 @@ body {
   margin: 0 24vw;
 }
 
+.app-container a:hover {
+  text-decoration: none;
+}
+
 .no-movie-message {
   font-family: var(--paragraph), serif;
   color: white;
