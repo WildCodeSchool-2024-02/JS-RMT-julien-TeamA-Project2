@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
-import "./FilterBar.css";
+import "../assets/styles/components/FilterBar.css";
 
 function FilterBar({ selectedFilter, setSelectedFilter, title, type }) {
   const [filters, setFilters] = useState([]);

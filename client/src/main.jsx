@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { FavoritesProvider } from "./contexts/FavoritesContext";
 
 import App from "./App";
-import Moviepage from "./pages/Moviepage";
+import MoviePage from "./pages/MoviePage";
 import ContactPage from "./pages/ContactPage";
 import FavoritesPage from "./pages/FavoritesPage";
 import ErrorPage from "./pages/ErrorPage";
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/movies/:id",
-    element: <Moviepage />,
+    element: <MoviePage />,
     errorElement: <ErrorPage />,
     loader: async ({ params }) => {
       const res = await axios.get(

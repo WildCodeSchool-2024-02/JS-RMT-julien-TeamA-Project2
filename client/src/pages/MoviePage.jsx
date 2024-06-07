@@ -6,14 +6,14 @@ import GenderCarousel from "../components/GenderCarousel";
 import Footer from "../components/Footer";
 import "../assets/styles/pages/MoviePage.css";
 
-function Moviepage() {
+function MoviePage() {
   const movie = useLoaderData();
 
   return (
     <>
       <Navigation styleClass="moviepage" />
       <MoviePoster poster={movie} />
-      <div className="bandeau-title">
+      <div className="band-title">
         <h1>{movie.title}</h1>
         <p>{movie.release_date.slice(0, 4)}</p>
       </div>
@@ -25,4 +25,4 @@ function Moviepage() {
   );
 }
 
-export default Moviepage;
+export default MoviePage;

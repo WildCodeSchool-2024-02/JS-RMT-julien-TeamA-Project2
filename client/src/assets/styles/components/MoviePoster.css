@@ -4,14 +4,14 @@
   background-position: 50% 50%;
 }
 
-.bandeau {
+.band {
   display: flex;
   align-items: end;
   font-size: 1.5rem;
   color: white;
 }
 
-.bandeau-bg {
+.band-bg {
   background-color: rgba(0, 0, 0, 0.308);
   width: 100%;
   display: flex;
@@ -27,7 +27,7 @@
   transform: translateY(55px);
 }
 
-.bandeau-note {
+.band-note {
   flex-direction: column;
   align-items: center;
 }
