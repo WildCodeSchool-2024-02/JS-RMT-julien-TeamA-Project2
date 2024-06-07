@@ -1,0 +1,15 @@
+body {
+  background: var(--background-gradient-color);
+}
+
+.myFavoritesTitle {
+  font-family: var(--title);
+  color: #d5d5d5;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.lineMovieList {
+  margin-top: 2rem;
+  padding: 2rem 8rem;
+}

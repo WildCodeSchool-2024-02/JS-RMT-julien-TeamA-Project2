@@ -1,0 +1,13 @@
+.band-title {
+  gap: 1rem;
+  margin: 3rem 0 0 1rem;
+  font-size: 1.8rem;
+  color: white;
+}
+
+@media (width > 768px) {
+  .band-title {
+    margin-left: 10%;
+    margin-top: 3%;
+  }
+}

@@ -1,0 +1,23 @@
+.moviedescription {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  width: 70%;
+  margin: 20px 20%;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
+}
+
+.moviedescription p {
+  margin: 0;
+  line-height: 1.5;
+}
+@media screen and (max-width: 768px) {
+  .moviedescription {
+    width: auto;
+    margin: 3rem;
+    font-size: 1rem;
+  }
+}

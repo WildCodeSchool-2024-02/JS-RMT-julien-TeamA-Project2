@@ -1,165 +1,91 @@
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #eee;
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --title: "Libre Baskerville", serif;
+  --paragraph: "Open Sans", sans-serif;
+  --button-color: #f2c743;
+  --background-gradient-color: linear-gradient(
+    0deg,
+    rgba(7, 12, 22, 1) 0%,
+    rgba(6, 12, 24, 1) 100%
+  );
+  --background-card-color: #d9d9d9;
+  font-family: var(--paragraph), serif;
 }
 
-.container {
-  height: 100vh;
-  background-image: url("./assets/images/background.webp");
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 30px;
+h1,
+h2 {
+  font-family: var(--title), serif;
 }
 
-.logo {
-  font-size: 20px;
-  margin-top: 16px;
+body {
+  background: var(--background-gradient-color);
 }
 
-.navbar ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #eee;
-  display: flex;
-  gap: 5px;
-  justify-content: end;
-  margin-top: auto;
-  font-size: 15px;
-}
-
-.navbar a:hover {
-  scale: 110%;
-}
-
-.text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.yellow-button {
+  margin-top: 10px;
   text-align: center;
-}
-
-.block-primary {
-  text-transform: uppercase;
-  margin-bottom: 30px;
-}
-
-.block-primary-main {
-  font-size: 50px;
-  font-weight: 400;
-  letter-spacing: 5px;
-  animation: blink 12s infinite;
-}
-
-.block-primary-sub {
-  display: block;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
   font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 7px;
+  background-color: var(--button-color);
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0 2px 4px,
+    rgba(0, 0, 0, 0.3) 0 7px 13px -3px,
+    rgba(240, 226, 185, 0.502) 0 -3px 0 inset;
 }
 
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
+.yellow-button:hover,
+.yellow-button:focus {
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0 4px 8px,
+    rgba(0, 0, 0, 0.3) 0 7px 13px -3px,
+    rgba(240, 226, 185, 0.502) 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.yellow-button:active {
+  box-shadow: rgba(240, 226, 185, 0.502) 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.app-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.7vw;
+  margin: 2rem 24vw;
+}
+
+.app-container a:hover {
   text-decoration: none;
-  padding: 10px 20px;
-  display: inline-block;
-  border-radius: 100px;
-  transition: all 0.2s;
-  position: relative;
 }
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.no-movie-message {
+  font-family: var(--paragraph), serif;
+  color: white;
+}
+.filter-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.5rem;
 }
 
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.btn-white {
-  background-color: #fff;
-  color: #777;
-  font-size: 14px;
-}
-
-footer {
-  position: absolute;
-  top: 85%;
-  left: 75%;
-}
-
-.wcs {
-  text-decoration: none;
-  color: #ff1493ad;
-}
-
-.wcs:hover {
-  border-bottom: solid 1px #ff1493ad;
-}
-
-@media screen and (max-width: 760px) {
-  .logo {
-    display: none;
+/* Partie responsive */
+@media screen and (max-width: 768px) {
+  .app-container {
+    margin: 3rem 21vw;
+    gap: 2vw;
   }
-
-  .container {
-    justify-content: center;
-  }
-
-  footer {
-    position: absolute;
-    top: 85%;
-    left: 20%;
-  }
-}
-
-@media screen and (min-width: 761px) and (max-width: 960px) {
-  footer {
-    position: absolute;
-    top: 85%;
-    left: 60%;
-  }
-}
-
-@keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
-  }
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-    text-shadow:
-      0 0 5px #ff1493ad,
-      0 0 15px #eee,
-      0 0 20px #ff1493ad,
-      0 0 40px #a00ac9,
-      0 0 60px #ff0000,
-      0 0 10px #970dc5,
-      0 0 98px #ff0000;
-    color: #fff;
+  .filter-container {
+    display: block;
+    margin-left: 4rem;
+    margin-top: 1rem;
   }
 }
